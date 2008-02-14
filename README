@@ -1,0 +1,58 @@
+lua-md5
+------------------------------------------
+MD5 offers basic cryptographic facilities for Lua: a hash (digest) 
+function, a pair crypt/decrypt based on MD5 and CFB, and a pair 
+crypt/decrypt based on DES with 56-bit keys.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  lua-5.1.3-1
+
+Build requirements:
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://www.keplerproject.org/md5/
+
+Canonical download:
+  http://luaforge.net/projects/md5/
+
+-------------------------------------------
+
+Build instructions:
+  unpack lua-md5-1.1.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./lua-md5-1.1.1-X.cygport all
+
+This will create:
+  /usr/src/lua-md5-1.1.1-X-src.tar.bz2
+  /usr/src/lua-md5-1.1.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/lua/5.1/des56.dll
+  /usr/lib/lua/5.1/md5/core.dll
+  /usr/share/doc/lua-md5-1.1.1/README
+  /usr/share/doc/lua-md5-1.1.1/html/index.html
+  /usr/share/doc/lua-md5-1.1.1/html/license.html
+  /usr/share/doc/lua-md5-1.1.1/html/manual.html
+  /usr/share/doc/lua-md5-1.1.1/html/md5.png
+  /usr/share/lua/5.1/md5.lua
+
+------------------
+
+Port Notes:
+
+----- version 1.1.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

@@ -1,0 +1,21 @@
+inherit lua
+
+DESCRIPTION="Lua MD5 library"
+HOMEPAGE="http://www.keplerproject.org/md5/"
+SRC_URI="http://luaforge.net/frs/download.php/2746/md5-${PV}.tar.gz"
+SRC_DIR="md5-${PV}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake \
+		LIB_OPTION="-shared -Wl,--enable-auto-image-base" \
+		LUA_INC=${LUA_INCLUDEDIR} LIBS=${LUA_LIBS} LUA_VERSION_NUM=${LUA_VERSION/./0}
+}
+
+src_install() {
+	cd ${B}
+	cyginstall PREFIX=${D}/usr
+}
+
+HTMLDOCS="doc/us/*"

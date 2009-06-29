@@ -1,5 +1,5 @@
 category: Lua
-requires: cygwin lua
+requires: lua
 sdesc: "Lua MD5 library"
 ldesc: "MD5 offers basic cryptographic facilities for Lua: a hash 
 (digest) function, a pair crypt/decrypt based on MD5 and CFB, and a pair 
